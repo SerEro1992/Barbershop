@@ -1,2 +1,394 @@
 @import "_nullstyle"; // Подключение файла ( обнуление стилей)
 
+
+
+body {
+	font-family: 'PT Sans', sans-serif;
+  background-color: #FBF7F4;
+  color: #242424;
+}
+
+.wrapper {
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  
+}
+
+
+.container {
+  width:940px;
+  margin:0 auto;
+}
+
+.page {
+		&__header {
+		}
+}
+
+.header {
+  background-color: #000000;
+  color:#ffffff;
+
+		&__nav {
+      display: flex;
+		}
+}
+
+.nav-page {
+
+		&__list {
+      width: 430px;
+		}
+}
+
+.nav {
+		&__item {
+		}
+
+		&__link {
+      font-family: 'PT Sans Narrow', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: #000000;
+      color:#ffffff;
+
+
+		}
+}
+.nav- {
+
+		&__link {}
+}
+.nav-user {
+
+		&__list {
+      max-width: 250px;
+      margin-left: auto;
+		}
+}
+
+
+main{
+  flex: 1 1 auto;
+}
+
+.main-container{
+  color: #242424;
+  background-image: url("../assets/img/light.png");
+  background-color: #FBF7F4;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+.main-index {
+    color:#ffffff;
+    background:#000000 url("../assets/img/interior.jpg")  0% 0% / 100% auto no-repeat ;
+
+
+		&__logo {
+      display: block;
+      margin:0 auto;
+      width: 361px;
+      height: 152px;
+
+		}
+}
+.advantages {
+
+		&__list {
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+		}
+
+		&__item {
+      width: 277px;
+		}
+
+		&__title {
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 32px;
+      line-height: 35px;
+      text-transform: uppercase;
+		}
+
+		&__discription {
+		}
+}
+.services {
+  width: 390px;
+  text-transform: uppercase;
+		&__title {
+      font-size: 32px;
+      line-height: 35px;
+      font-weight: 700;
+
+		}
+
+		&__list {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+		}
+
+		&__item {
+		}
+
+		&__name {
+		}
+
+		&__price {
+      color: #AF7842;
+		}
+
+		&__button {
+		}
+}
+
+
+.gallery {
+width: 390px;
+		&__title {
+      font-size: 32px;
+      line-height: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+		}
+}
+.slider {
+
+		&__image {
+		}
+
+		&__button {
+		}
+}
+.slider-prev {
+}
+.slider-next {
+}
+.slider-pagination {
+
+		&__item {
+		}
+
+		&__button {
+		}
+
+		&__button-current {
+		}
+}
+.contacts {
+  font-weight: 700;
+  width: 352px;
+
+		&__title {
+      font-size: 32px;
+      line-height: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+		}
+
+		&__subtitle {
+      font-size: 20px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: #AF7842;
+		}
+
+		&__address {
+      font-style: normal;
+		}
+
+		&__schedule {
+		}
+
+		&__text {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+		}
+
+		&__phone {
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-transform: uppercase;
+		}
+
+		&__map-link {
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-decoration: underline;
+      text-transform: uppercase;
+		}
+}
+.address {
+
+		&__text {
+
+		}
+}
+.address {
+
+		&__phone {
+		}
+}
+.schedule {
+
+		&__item {
+		}
+}
+.button-feedback {
+}
+.appointment {
+  width: 430px;
+
+		&__title {
+      font-size: 32px;
+      line-height: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+		}
+
+		&__text {
+		}
+
+		&__form {
+      color: #595959;
+		}
+
+		&__form-name {
+		}
+}
+.appointment-form {
+
+		&__date {
+		}
+
+		&__time {
+		}
+
+		&__tel {
+		}
+}
+.form {
+
+		&__label {
+      line-height: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+		}
+}
+.form-label {
+
+
+		&__icon {
+		}
+
+		&__info {
+		}
+}
+
+
+.footer-container{
+  display: flex;
+}
+.footer {
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #242424;
+  background-image: url("../assets/img/dark.png");
+  a {
+    color: #FFFFFF;
+  }
+  &__logo{
+    width: 184px;
+    height: 21px;
+  }
+
+		&__contacts {
+      max-width: 200px;
+      margin-right: 130px;
+		}
+		&__newsletter {
+		}
+
+		&__social {
+      margin-left: auto;
+      max-width: 190px;
+		}
+}
+.newsletter {
+		&__title {
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-transform: uppercase;
+		}
+		&__form {
+		}
+		&__email {
+		}
+		&__button {
+		}
+}
+.field {
+}
+.social {
+		&__title {
+		}
+		&__list {
+		}
+		&__item {
+		}
+		&__link {
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 700;
+      text-align: center;
+      color: #FFFFFF;
+      background-color: #000000;
+		}
+
+		&__text {
+		}
+}
+.html {
+		&__link {
+      font-size: 14px;
+      color: #DBB590;
+		}
+}
+
+@import "_catalog";
