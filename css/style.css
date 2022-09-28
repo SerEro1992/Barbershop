@@ -110,6 +110,17 @@ body {
   text-transform: uppercase;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 940px;
   margin: 0 auto;
@@ -125,6 +136,8 @@ body {
 
 .nav-page__list {
   width: 430px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav__link {
@@ -137,11 +150,18 @@ body {
   text-align: center;
   background-color: #000000;
   color: #ffffff;
+  padding: 24px 19px;
+  display: block;
 }
 
 .nav-user__list {
   max-width: 250px;
   margin-left: auto;
+}
+
+.nav-user__list .nav__item .nav__link {
+  min-width: 16px;
+  min-height: 22px;
 }
 
 main {
@@ -154,20 +174,29 @@ main {
   background-color: #FBF7F4;
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 40px;
+  margin-bottom: 32px;
+}
+.main-container:last-child {
+  margin-bottom: 0;
 }
 
 .main-index {
   color: #ffffff;
   background: #000000 url("../assets/img/interior.jpg") 0% 0%/100% auto no-repeat;
+  padding: 60px 0;
 }
 .main-index__logo {
   display: block;
   margin: 0 auto;
   width: 361px;
   height: 152px;
+  margin-bottom: 60px;
 }
 
+.advantages {
+  margin-bottom: 58px;
+}
 .advantages__list {
   text-align: center;
   display: flex;
@@ -181,6 +210,7 @@ main {
   font-size: 32px;
   line-height: 35px;
   text-transform: uppercase;
+  margin-bottom: 56px;
 }
 .services {
   width: 390px;
@@ -190,6 +220,7 @@ main {
   font-size: 32px;
   line-height: 35px;
   font-weight: 700;
+  margin-bottom: 28px;
 }
 .services__list {
   font-size: 20px;
@@ -207,6 +238,7 @@ main {
   line-height: 35px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 28px;
 }
 
 .contacts {
@@ -218,6 +250,7 @@ main {
   line-height: 35px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 28px;
 }
 .contacts__subtitle {
   font-size: 20px;
@@ -260,6 +293,7 @@ main {
   line-height: 35px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 28px;
 }
 .appointment__form {
   color: #595959;
@@ -272,6 +306,7 @@ main {
 
 .footer-container {
   display: flex;
+  padding: 40px 0;
 }
 
 .footer {
@@ -287,6 +322,7 @@ main {
 .footer__logo {
   width: 184px;
   height: 21px;
+  margin-bottom: 27px;
 }
 .footer__contacts {
   max-width: 200px;
@@ -304,6 +340,27 @@ main {
   font-weight: 700;
   color: #FFFFFF;
   text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.social__title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  line-height: 28px;
+}
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.social__item {
+  width: 56px;
+  height: 44px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.social__item:nth-child(3n) {
+  margin-right: 0;
 }
 .social__link {
   font-family: inherit;
@@ -319,12 +376,15 @@ main {
   color: #DBB590;
 }
 
-.nav__logo {
+.header__logo {
+  display: flex;
+  align-items: center;
   width: 140px;
   margin-right: 100px;
 }
 
 .main__inner {
+  padding: 40px 40px 60px;
   background-image: url("../assets/img/light.png");
 }
 
@@ -336,12 +396,15 @@ main {
   font-size: 32px;
   line-height: 35px;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .breadcrumbs {
   color: #242424;
+  display: flex;
 }
 .breadcrumbs__link {
+  margin-right: 32px;
   color: inherit;
 }
 
@@ -362,6 +425,21 @@ main {
 }
 .control__label {
   font-weight: 700;
+}
+
+.sorting {
+  display: flex;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.sorting .button {
+  width: 56px;
+  height: 44px;
+}
+
+.sorting-type {
+  margin-right: auto;
 }
 
 .product-card {
@@ -387,9 +465,19 @@ main {
 }
 
 .pagination {
+  display: flex;
+  padding: 16px;
   background-color: #FFFFFF;
 }
+.pagination__item:not(:last-child) {
+  margin-right: 8px;
+}
 .pagination__link {
+  display: block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 44px;
+  padding: 14px 20px;
   color: #FFFFFF;
   background-color: #000000;
   text-decoration: none;
@@ -403,7 +491,9 @@ main {
   color: #242424;
   background-color: #FFFFFF;
 }
-.button-light {
-  color: #242424;
-  background-color: #FFFFFF;
+.pagination__button {
+  margin-left: auto;
+  display: block;
+  height: 44px;
+  padding: 14px 20px;
 }

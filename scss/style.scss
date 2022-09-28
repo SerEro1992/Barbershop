@@ -25,7 +25,14 @@ body {
 }
 
 .visually-hidden {
-  
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -52,10 +59,13 @@ body {
 
 		&__list {
       width: 430px;
+      display:flex;
+      flex-wrap: wrap;
 		}
 }
 
 .nav {
+
 		&__item {
 		}
 
@@ -69,20 +79,24 @@ body {
       text-align: center;
       background-color: #000000;
       color:#ffffff;
+      padding: 24px 19px;
+      display: block;
+
 
 
 		}
 }
-.nav- {
 
-		&__link {}
-}
 .nav-user {
 
 		&__list {
       max-width: 250px;
       margin-left: auto;
 		}
+    }
+  .nav-user__list .nav__item .nav__link {
+  min-width: 16px;
+  min-height: 22px;
 }
 
 
@@ -96,11 +110,16 @@ main{
   background-color: #FBF7F4;
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
-}
+  padding: 40px;
+  margin-bottom: 32px;
+  &:last-child{
+  margin-bottom: 0;
+  }}
+
 .main-index {
     color:#ffffff;
-    background:#000000 url("../assets/img/interior.jpg")  0% 0% / 100% auto no-repeat ;
+    background:#000000 url("../assets/img/interior.jpg")  0% 0% / 100% auto no-repeat;
+    padding:60px 0;
 
 
 		&__logo {
@@ -108,11 +127,12 @@ main{
       margin:0 auto;
       width: 361px;
       height: 152px;
+      margin-bottom: 60px;
 
 		}
 }
 .advantages {
-
+    margin-bottom: 58px;
 		&__list {
       text-align: center;
       display: flex;
@@ -128,6 +148,7 @@ main{
       font-size: 32px;
       line-height: 35px;
       text-transform: uppercase;
+      margin-bottom: 56px;
 		}
 
 		&__discription {
@@ -140,6 +161,7 @@ main{
       font-size: 32px;
       line-height: 35px;
       font-weight: 700;
+      margin-bottom: 28px;
 
 		}
 
@@ -171,6 +193,7 @@ width: 390px;
       line-height: 35px;
       font-weight: 700;
       text-transform: uppercase;
+      margin-bottom: 28px;
 		}
 }
 .slider {
@@ -205,6 +228,7 @@ width: 390px;
       line-height: 35px;
       font-weight: 700;
       text-transform: uppercase;
+      margin-bottom: 28px;
 
 		}
 
@@ -274,6 +298,7 @@ width: 390px;
       line-height: 35px;
       font-weight: 700;
       text-transform: uppercase;
+      margin-bottom: 28px;
 		}
 
 		&__text {
@@ -318,6 +343,7 @@ width: 390px;
 
 .footer-container{
   display: flex;
+  padding: 40px 0;
 }
 .footer {
 
@@ -332,6 +358,7 @@ width: 390px;
   &__logo{
     width: 184px;
     height: 21px;
+    margin-bottom: 27px;
   }
 
 		&__contacts {
@@ -354,6 +381,7 @@ width: 390px;
       font-weight: 700;
       color: #FFFFFF;
       text-transform: uppercase;
+      margin-bottom: 14px;
 		}
 		&__form {
 		}
@@ -366,11 +394,27 @@ width: 390px;
 }
 .social {
 		&__title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      line-height: 28px;
 		}
 		&__list {
+      display: flex;
+      flex-wrap: wrap;
 		}
 		&__item {
+      width: 56px;
+      height: 44px;
+      margin-right: 8px;
+      margin-bottom: 8px;
 		}
+    &__item:nth-child(3n){
+      margin-right: 0;
+    }
+
+
 		&__link {
       font-family: inherit;
       font-size: 16px;
@@ -379,6 +423,7 @@ width: 390px;
       text-align: center;
       color: #FFFFFF;
       background-color: #000000;
+
 		}
 
 		&__text {

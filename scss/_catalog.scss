@@ -1,9 +1,17 @@
 .nav__logo{
-  width: 140px;
-  margin-right: 100px;
+
   }
+  .header__logo{
+    display: flex;
+    align-items: center;
+    width: 140px;
+    margin-right: 100px;
+
+  }
+
 .main {
   &__inner {
+    padding: 40px 40px 60px ;
     background-image: url("../assets/img/light.png");
   }
 }
@@ -16,14 +24,18 @@
     font-size: 32px;
     line-height: 35px;
     text-transform: uppercase;
+    margin-bottom: 16px;
   }
 }
 
 .breadcrumbs {
   color: #242424;
+  display: flex;
+
   &__item {
   }
   &__link {
+    margin-right: 32px;
     color: inherit;
   }
 }
@@ -73,8 +85,17 @@
 }
 
 .sorting{
+  display: flex;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.sorting .button{
+width: 56px;
+height: 44px;
+
 }
 .sorting-type {
+  margin-right: auto;
 }
 .select-control {
 }
@@ -107,10 +128,21 @@
   }
 }
 .pagination {
+  display: flex;
+  padding: 16px;
   background-color: #FFFFFF;
+
   &__item {
   }
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
   &__link {
+    display: block;
+    box-sizing:border-box;
+    width: 50px;height: 44px;
+    padding: 14px 20px;
     color: #FFFFFF;
     background-color: #000000;
     text-decoration: none;
@@ -127,11 +159,15 @@
     background-color: #FFFFFF;
   }
   &__next {
+
   }
   &__button {
+    margin-left: auto;
+    display: block;
+    height: 44px;
+    padding: 14px 20px;
+
   }
 }
-.button-light {
-  color: #242424;
-  background-color: #FFFFFF;
-}
+
+
