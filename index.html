@@ -20,8 +20,8 @@
               <li class="nav__item">
                 <a href="about.html" class="nav__link">О нас</a>
               </li>
-              <li class="nav__item">
-                <a href="catalog.html" class="nav__link">Каталог</a>
+              <li class="nav__item ">
+                <a class="nav__link  " href="catalog.html" >Каталог</a>
               </li>
               <li class="nav__item">
                 <a href="faq.html" class="nav__link">Частые вопросы</a>
@@ -30,17 +30,24 @@
 
             <ul class="nav-user__list nav-page__list">
               <li class="nav__item">
-                <a href="#" class="nav__link"
-                  ><span class="visually-hidden">Поиск</span>
+                <a href="#" class="nav__link "
+                  >
+                  <svg class="nav__icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 6.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-.67 5.25a6.5 6.5 0 1 1 1.41-1.41l3.97 3.95-1.42 1.42-3.96-3.96Z"/></svg>
+                  <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
               <li class="nav__item">
                 <a href="#" class="nav__link"
-                  ><span class="visually-hidden">Корзина</span></a
+                  >
+                  <svg class="nav__icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.1 6 3.57.9l.08-.9h8.67l.1.9.48 5.1H15.63l-.14 1.12-1 8-.1.88H1.61l-.11-.88-1-8L.37 6H3.1Zm2 0h5.8l-.38-4H5.48L5.1 6Zm-1.72 8-.75-6h10.74l-.75 6H3.38ZM8.5 9.5v3h2v-3h-2Zm-3 3v-3h2v3h-2Z"/></svg>
+                  <span class="visually-hidden">Корзина</span></a
                 >
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Вход</a>
+                <a href="#" class="nav__link button-input">
+                  <svg class="nav__icon nav__icon-login" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 2h5v12H9v2h7V0H9v2ZM4.3 3.7l3.24 3.25H0v2h7.54l-3.25 3.24 1.42 1.42 4.95-4.95.7-.71-.7-.7L5.7 2.28 4.29 3.71Z"/></svg>
+                  Вход</a>
               </li>
             </ul>
           </nav>
@@ -81,6 +88,11 @@
               </li>
             </ul>
           </section>
+
+
+
+
+
           <div class="main-container">
             <section class="services">
               <h2 class="services__title">Популярные услуги</h2>
@@ -175,6 +187,7 @@
               <a href="" class="button">Как проехать</a>
               <a href="" class="button button-feedback">Обратная связь</a>
             </section>
+
             <section class="appointment">
               <h2 class="appointment__title">Записаться</h2>
               <p class="appointment__text">
@@ -186,15 +199,16 @@
                 action="https://echo.htmlacademy.ru/"
                 method="post"
               >
-                <p class="appointment-form__date">
-                  <span class="form__label form-label__icon">
+                <p class="appointment-form__date appointment-form field-group">
+                  <label class="form-label" for="appointment-date"
+                    >Дата
+
                     <button class="form-label__info" type="button">
                       <span class="visually-hidden"
                         >Посмотреть дополнительную информацию</span
                       >
                     </button>
-                  </span>
-                  <label for="appointment-date">Дата</label>
+                  </label>
                   <input
                     type="text"
                     name="appointment-date"
@@ -202,15 +216,17 @@
                     placeholder="01.01.2022"
                   />
                 </p>
-                <p class="appointment-form__time">
-                  <span class="form__label form-label__icon">
+
+                <p class="appointment-form__time appointment-form field-group">
+                  <label class="form-label" for="appointment-time"
+                    >Время
+
                     <button class="form-label__info" type="button">
                       <span class="visually-hidden"
                         >Посмотреть дополнительную информацию</span
                       >
                     </button>
-                  </span>
-                  <label for="appointment-time">Время</label>
+                  </label>
                   <input
                     type="text"
                     name="appointment-time"
@@ -218,8 +234,11 @@
                     placeholder="10:10"
                   />
                 </p>
-                <p class="appointment-form__tel">
-                  <label for="appointment-tel">Телефон</label>
+
+                <p class="appointment-form__tel appointment-form field-group">
+                  <label class="form-label" for="appointment-tel"
+                    >Телефон</label
+                  >
                   <input
                     type="text"
                     name="appointment-tel"
@@ -227,7 +246,8 @@
                     placeholder="+7 800 000-00-00"
                   />
                 </p>
-                <p class="appointment__form-name">
+
+                <p class="appointment-form__name appointment-form field-group">
                   <span class="form-label form-label__icon"> </span>
                   <label for="appointment-name">Ваше имя</label>
                   <input
@@ -237,7 +257,9 @@
                     placeholder="Иванов Иван"
                   />
                 </p>
-                <button class="button" type="submit">Записаться</button>
+                <button class="appointment-button button" type="submit">
+                  Записаться
+                </button>
               </form>
             </section>
           </div>
@@ -246,7 +268,7 @@
 
       <footer class="footer">
         <div class="container footer-container">
-          <section class="footer__contacts">
+          <section class="footer__contact">
             <h2 class="visually-hidden">Контакты</h2>
             <img
               src="../Barbershop/assets/img/footer-logo.svg"
@@ -254,17 +276,17 @@
               class="footer__logo"
             />
 
-            <address class="contacts__address">
-              <p class="contacts__text">
+            <address class="contact__address">
+              <p class="contact__text">
                 Санкт-Петербург, набережная реки Карповки, 5, литера П.
               </p>
-              <a href="tel:88005558628" class="contacts__phone"
+              <a href="tel:88005558628" class="contact__phone"
                 >+7 800 555-86-28</a
               >
             </address>
             <a
               href="https://www.google.com/maps/place/%D0%BD%D0%B0%D0%B1.+P%D0%B5%D0%BA%D0%B8+%D0%9A%D0%B0%D1%80%D0%BF%D0%BE%D0%B2%D0%BA%D0%B8,+5+%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81+%D0%9F,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+197022/@59.9683447,30.3151923,17z/data=!3m1!4b1!4m5!3m4!1s0x4696315bc4e8ce61:0x74d4f0cbfe1fd995!8m2!3d59.968342!4d30.317381"
-              class="contacts__map-link"
+              class="contact__map-link"
               target="_blank"
               >Как нас найти?</a
             >
@@ -292,12 +314,13 @@
               </button>
             </form>
           </section>
+
           <section class="footer__social">
             <h2 class="social__title">Давайте дружить</h2>
             <ul class="social__list">
               <li class="social__item">
                 <a
-                  class="social__link"
+                  class="social__link twitter"
                   href="https://twitter.com/htmlacademy_ru"
                   class="social__button button"
                   target="_blank"
@@ -307,7 +330,7 @@
               </li>
               <li class="social__item">
                 <a
-                  class="social__link"
+                  class="social__link vkontakte"
                   href="https://vk.com/htmlacademy"
                   class="social__button button"
                   target="_blank"
@@ -317,7 +340,7 @@
               </li>
               <li class="social__item">
                 <a
-                  class="social__link"
+                  class="social__link instagram"
                   href="https://www.facebook.com/htmlacademy"
                   class="social__button button"
                   target="_blank"
