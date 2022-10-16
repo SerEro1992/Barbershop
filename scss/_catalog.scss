@@ -21,18 +21,27 @@
 
 .main {
   &__inner {
+<<<<<<< HEAD
 	margin: 0 auto;
+=======
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
     padding: 40px 40px 60px ;
     background-image: url("../assets/img/light.png");
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
 .catalog-container{
   width: 700px;
 }
 
 .inner-header {
+<<<<<<< HEAD
 	margin-bottom: 32px;
+=======
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
   &__title {
     font-size: 32px;
     line-height: 35px;
@@ -79,8 +88,11 @@
 
 .filter {
   &__group {
+<<<<<<< HEAD
 	margin-bottom: 40px;
 
+=======
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
   }
   &__title {
     font-size: 20px;
@@ -88,6 +100,7 @@
     font-weight: 700;
     color: #242424;
     text-transform: uppercase;
+<<<<<<< HEAD
 	margin-bottom: 22px;
   }
   &__label {
@@ -205,6 +218,29 @@ background-color: #DBB590;
 	width: 20px;
 	height: 20px;
 	border:2px solid #242424;
+=======
+  }
+  &__label {
+  }
+  &__input {
+  }
+  &__list {
+  }
+  &__item {
+  }
+}
+
+.range-toggle {
+}
+.toggle-min {
+}
+.toggle-max {
+}
+.control {
+  &__input {
+  }
+  &__mark {
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
   }
   &__label {
     font-weight: 700;
@@ -220,6 +256,7 @@ background-color: #DBB590;
 .sorting .button{
 width: 56px;
 height: 44px;
+<<<<<<< HEAD
 }
 .sorting-select{
 	position: relative;
@@ -251,6 +288,14 @@ border-color:#AF7842;
 }
 .select-control:focus{
 	outline: 2px solid #DBB590;
+=======
+
+}
+.sorting-type {
+  margin-right: auto;
+}
+.select-control {
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
 }
 .card-grid-toggle{
   display: flex;
@@ -258,6 +303,7 @@ border-color:#AF7842;
   justify-content: center;
 
 }
+<<<<<<< HEAD
 .control__input[type="checkbox"]:checked + .control__mark::before{
 	transform: rotate(45deg);
 }
@@ -265,6 +311,10 @@ border-color:#AF7842;
 .control__input[type="checkbox"]:checked + .control__mark::after{
 	transform: rotate(-45deg);
 }
+=======
+
+
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
 
 .card-grid-toggle svg{
   fill: #fff;
@@ -289,6 +339,12 @@ border-color:#AF7842;
   background-color: #4E2E0E;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
 .product {
 
   &__list {
@@ -302,6 +358,10 @@ border-color:#AF7842;
 .product-card {
   background-color: #FFFFFF;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
   &__list {
   display: grid;
   grid-template-rows: 200px min-content auto min-content 16px;
@@ -342,6 +402,13 @@ border-color:#AF7842;
  }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
 .pagination {
   display: flex;
   padding: 16px;
@@ -386,3 +453,8 @@ border-color:#AF7842;
 
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a3364804690dbda12c4f942ba796da8444ab949b
