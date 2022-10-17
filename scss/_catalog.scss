@@ -21,15 +21,19 @@
 
 .main {
   &__inner {
+	margin: 0 auto;
     padding: 40px 40px 60px ;
     background-image: url("../assets/img/light.png");
   }
 }
+
 .catalog-container{
   width: 700px;
 }
 
 .inner-header {
+	margin-bottom: 32px;
+
   &__title {
     font-size: 32px;
     line-height: 35px;
@@ -41,6 +45,7 @@
 .breadcrumbs {
   display: flex;
    color: #242424;
+   margin-bottom: 32px;
 
   &__item {
     margin-right: 32px;
@@ -60,10 +65,12 @@
   &__item:last-child::after {
   content:none;
   }
-
   &__link {
     color: inherit;
   }
+}
+.breadcrumbs__link-main{
+  text-decoration: underline;
 }
 
 .catalog-products {
@@ -76,6 +83,8 @@
 
 .filter {
   &__group {
+	margin-bottom: 40px;
+
   }
   &__title {
     font-size: 20px;
@@ -83,8 +92,131 @@
     font-weight: 700;
     color: #242424;
     text-transform: uppercase;
+	margin-bottom: 22px;
   }
   &__label {
+	display: flex;
+	margin-right: 5px;
+  }
+  &__input {
+	width: 30px;
+	padding: 0 2px;
+	text-align: center;
+	background-color:transparent;
+	border:none;
+	appearance: textfield;
+	font-size: 16px;
+
+  }
+  &__input::-webkit-inner-spin-button,
+  &__input::-webkit-outer-spin-button{
+	appearance: none;
+	margin: 0;
+  }
+
+  &__list {
+  }
+  &__item {
+	margin-bottom: 16px;
+  }
+  &__item:last-child {
+	margin-bottom: 0;
+  }
+}
+
+.range-wrapper-input{
+	display: flex;
+	justify-content: center;
+  align-items:center;
+  font-size: 16px;
+  line-height: 24px;
+}
+.range-scale{
+position: relative;
+height: 4px;
+margin-bottom: 16px;
+background-color:#242424;
+border-radius:2px;
+}
+.range-bar{
+	position: absolute;
+	height: 4px;
+	background-color:#AF7842;
+}
+.range-toggle {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border:2px solid  #242424;
+	border-radius:50%;
+	}
+.range-toggle:hover{
+background-color: #DBB590;
+}
+.range-toggle:active,
+.range-toggle:focus{
+	outline: 2px solid #DBB590;
+}
+.toggle-min {
+	top: -8px;
+	left: -10px;
+}
+.toggle-max {
+	top: -8px;
+	right: -10px;
+}
+
+
+.control:hover .control__mark{
+	border-color:#814B18;
+}
+
+
+.control{
+	position: relative;
+	display: block;
+	padding-left: 36px;
+
+  &__input:disabled + .control__mark {
+	border-color:#242424;
+  }
+
+  &__input[type="checkbox"]:checked + .control__mark::before,
+  &__input[type="checkbox"]:checked + .control__mark::after{
+	content:"";
+	position: absolute;
+	top: 7px;
+	left: 2px;
+	width: 12px;
+	height: 2px;
+	background-color:#242424
+  }
+  &__input[type="radio"]+ .control__mark{
+	border-radius:50%;
+  }
+  &__input[type="radio"]:checked + .control__mark::before{
+	content:"";
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color:#242424
+  }
+
+  &__mark {
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border:2px solid #242424;
+
+  }
+  &__label {
+    font-weight: 700;
   }
   &__input {
   }
@@ -104,6 +236,7 @@
   &__input {
   }
   &__mark {
+
   }
   &__label {
     font-weight: 700;
@@ -121,19 +254,55 @@ width: 56px;
 height: 44px;
 
 }
+.sorting-select{
+	position: relative;
+	display:flex;
+	align-items: center;
+	width: 260px;
+	margin-right: auto;
+}
+
+.sorting-type {
+  margin-right: auto;
+
+}
+.select-control {
+	width: 100%;
+	height:44px;
+
+	padding:8px 14px;
+	padding-right: 48px;
+	font: inherit;
+	font-weight: 700;
+	border: 2px solid #242424;
+	background:#fff url("../assets/img/arrow-down.svg") right 16px center no-repeat;
+	appearance: none;
+}
+.select-control:hover,
+.select-control:focus{
+border-color:#AF7842;
+}
+.select-control:focus{
+	outline: 2px solid #DBB590;
+
+}
 .sorting-type {
   margin-right: auto;
 }
-.select-control {
-}
+
 .card-grid-toggle{
   display: flex;
   align-items: center;
   justify-content: center;
 
 }
+.control__input[type="checkbox"]:checked + .control__mark::before{
+	transform: rotate(45deg);
+}
 
-
+.control__input[type="checkbox"]:checked + .control__mark::after{
+	transform: rotate(-45deg);
+}
 
 .card-grid-toggle svg{
   fill: #fff;
@@ -157,9 +326,6 @@ height: 44px;
   outline: 2px solid #DBB590;
   background-color: #4E2E0E;
 }
-
-
-
 
 .product {
 
@@ -215,10 +381,6 @@ height: 44px;
  }
 
 
-
-
-
-
 .pagination {
   display: flex;
   padding: 16px;
@@ -263,5 +425,3 @@ height: 44px;
 
   }
 }
-
-
