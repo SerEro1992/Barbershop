@@ -6,14 +6,14 @@ body {
 	font-family: 'PT Sans', sans-serif;
   background-color: #FBF7F4;
   color: #242424;
+  min-width: 1020px;
 }
 
 .wrapper {
-  min-height:100vh;
+  min-height:100%;
   display: flex;
   flex-direction: column;
-  width: 1020px;
-  margin:0 auto;
+
 }
 
 .container {
@@ -37,7 +37,7 @@ body {
   }
   .button:focus{
 	background-color: #4e2e0e;
-	outline: 2px solid #bdb590;
+	outline: 2px solid  #DBB590;
   }
   .button:disabled{
 	color:#e7e7e7;
@@ -84,7 +84,7 @@ body {
 .nav {
 		&__item {
       display: flex;
-	  position: relative;
+	    position: relative;
 		}
 
 		&__link {
@@ -114,8 +114,9 @@ body {
       left: 0;
       bottom: 0;
       right: 0;
-      margin: auto;
+      margin:auto;
       fill: #DBDBDB;
+
 		}
 
     &__link:hover .nav__icon svg{
@@ -128,12 +129,14 @@ body {
     &__icon:last-child{
       right: auto;
       left: 20px;
-      margin: auto 0;
+      margin: auto;
     }
 }
 
 .button-input{
   padding-left: 44px;
+  margin:auto 0;
+
 }
 
 .nav-user {
@@ -298,11 +301,12 @@ main{
     margin-bottom: 58px;
 		&__list {
       		text-align: center;
-      		display: flex;
-      		justify-content: space-between;
+      		display: grid;
+          gap:30px 54.5px;
+          grid-template-columns: repeat(3, 277px);
 		}
 		&__item {
-      		width: 277px;
+
 		}
 		&__title {
       		position: relative;
@@ -446,7 +450,7 @@ width: 390px;
 			}
 			&__button:focus{
 				outline: none;
-				background:#DBB590
+				 background: #DBB590;
 			}
 			&__button-current {
 			background-color: #242424;}
@@ -542,23 +546,28 @@ width: 390px;
 }
 
 .button-feedback {
-  margin-left: 16px;
   font-weight: 700;
   color:#242424;
   background-color:#FFFFFF;
+}
+
+.contacts__nav .button {
+  margin-right: 16px;
+  margin-bottom: 7px;
+}
+
+
+.button-feedback:hover {
+  background: #DBB590;
+}
+.button-feedback:focus {
+  background: #DBB590;
+  outline: 2px solid #AF7842;
 }
 .button-light{
 	font-weight: 700;
 	color:#242424;
 	background-color:#FFFFFF;
-}
-
-.button-feedback:hover {
-  background-color:#bdb590;
-}
-.button-feedback:focus {
-  background-color:#bdb590;
-  outline: 2px solid #AF7842;
 }
 
 .appointment {
@@ -708,6 +717,7 @@ margin: 0;
 
 		}
 		&__newsletter {
+      max-width: 300px;
 
 		}
 
@@ -762,6 +772,7 @@ margin: 0;
 		}
 		&__form {
       		display: flex;
+          width: 280px;
 
 		}
 		&__email {
