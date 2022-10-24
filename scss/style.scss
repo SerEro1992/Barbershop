@@ -3,22 +3,35 @@
 
 
 body {
-	font-family: 'PT Sans', sans-serif;
-  background-color: #FBF7F4;
-  color: #242424;
+  min-height:100vh;
   min-width: 1020px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #fbf7f4;
+  color: #242424;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
 .wrapper {
-  min-height:100%;
   display: flex;
   flex-direction: column;
 
 }
 
 .container {
-  width: 940px;
+  width: 1020px;
   margin:0 auto;
+  padding: 0 40px;
+}
+
+main{
+  flex: 1 1 auto;
 }
 
 .button {
@@ -30,14 +43,14 @@ body {
 	color: #FFFFFF;
 	background-color: #000000;
 	text-transform: uppercase;
-	padding:14px 20px;
+	padding: 14px 20px;
   }
   .button:hover{
   background-color: #814b18;
   }
   .button:focus{
 	background-color: #4e2e0e;
-	outline: 2px solid  #DBB590;
+	outline: 2px solid  #dbb590;
   }
   .button:disabled{
 	color:#e7e7e7;
@@ -67,37 +80,36 @@ body {
   background-color: #000000;
   color:#ffffff;
 
+
 		&__nav {
       display: flex;
 		}
 }
 
 .nav-page {
-
 		&__list {
-      width: 430px;
+      width: 400px;
       display:flex;
       flex-wrap: wrap;
 		}
 }
 
 .nav {
+
 		&__item {
-      display: flex;
-	    position: relative;
-		}
+      position: relative;
+     }
 
 		&__link {
       position: relative;
       display: block;
-      padding: 24px 19px;
+      padding: 24px 20px;
       font-family: "PT Sans Narrow", sans-serif;
       line-height: 22px;
       font-weight: 700;
       text-align: center;
-      color: #FFFFFF;
-      background-color: #000000;
-      text-decoration: none;
+      color: #fff;
+      background-color: #000;
       text-transform: uppercase;
 		}
 
@@ -114,43 +126,50 @@ body {
       left: 0;
       bottom: 0;
       right: 0;
-      margin:auto;
-      fill: #DBDBDB;
+      margin: auto;
+      fill: #dbdbdb;
+    }
 
-		}
 
-    &__link:hover .nav__icon svg{
+    &__link:hover .nav__icon{
       fill: #242424;
     }
-    &__link:focus .nav__icon svg{
-      fill: #d8d8d8;
+    &__link:focus .nav__icon{
+      fill: #dbdbdb;
    }
-
-    &__icon:last-child{
-      right: auto;
-      left: 20px;
-      margin: auto;
     }
+
+
+
+
+.nav-user {
+		&__list {
+      width: auto;
+      max-width: 280px;
+      margin-left: auto;
+
+
+      }
+      &__list .nav__link{
+        min-width: 56px;
+        min-height: 70px;
+      }
+}
+
+
+
+.button-input .nav__icon{
+  position: absolute;
+  right: auto;
+  left: 20px;
 }
 
 .button-input{
   padding-left: 44px;
-  margin:auto 0;
-
-}
-
-.nav-user {
-		&__list {
-      max-width: 250px;
-      margin-left: auto;
-	  justify-content: end;
-		}
-    }
-  .nav-user__list .nav__item .nav__link {
-  min-width: 16px;
-  min-height: 22px;
-}
-
+  }
+  .nav__link-input{
+    padding-left: 19px;
+  }
 
 .popover {
 	display: none;
@@ -235,7 +254,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-  color: #AF7842;
+  color: #af7842;
 	}
 	// .card-item__button
 	&__button {
@@ -251,31 +270,29 @@ body {
 	border-top: 1px dashed #595959;
   }
 
-main{
-  flex: 1 1 auto;
-}
+
 
 .main-index {
-    color:#ffffff;
-    background:#000000 url("../assets/img/interior.jpg") 0 0/ cover no-repeat;
-    padding:60px 0;
+    color:#fff;
+    background:#000 url("../assets/img/interior.jpg") 0 0 / 100% auto no-repeat;
+    padding:64px 0 54px;
 		&__logo {
       display: block;
       margin:0 auto;
       width: 361px;
       height: 152px;
-      margin-bottom: 60px;
+      margin-bottom: 64px;
 		}
 }
 
 .main-container{
   color: #242424;
   background-image: url("../assets/img/light.png");
-  background-color: #FBF7F4;
+  background-color: #fbf7f4;
   display: flex;
   justify-content: space-between;
   padding: 40px;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
   position: relative;
 
   &:last-child{
@@ -302,7 +319,7 @@ main{
 		&__list {
       		text-align: center;
       		display: grid;
-          gap:30px 54.5px;
+          gap:30px 55px;
           grid-template-columns: repeat(3, 277px);
 		}
 		&__item {
@@ -319,19 +336,16 @@ main{
     	&__title::before {
       		position: absolute;
       		content:'';
-      		bottom: -36px;
+      		bottom: -35px;
       		left: 50%;
-      		width: 16px;
-      		height: 16px;
-      		margin-left: -8px;
+      		width: 13px;
+      		height: 13px;
+      		margin-left: -7px;
       		background-color:#ffffff;
       		transform: rotate(45deg);
 	    }
 		&__discription {
-      font-weight: 400;
-      font-size: 16px;
       line-height: 24px;
-      text-align: center;
 		}
 }
 
@@ -339,6 +353,7 @@ main{
   width: 390px;
   text-transform: uppercase;
 		&__title {
+      font-family: 'PT Sans Narrow';
       font-size: 32px;
       line-height: 35px;
       font-weight: 700;
@@ -364,10 +379,21 @@ main{
       order:2;
     }
 		&__name {
-		}
+      font-family: 'PT Sans Narrow';
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      }
 		&__price {
-      color: #AF7842;
+      color: #af7842;
       order:3;
+      font-family: 'PT Sans Narrow';
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: right;
+      word-spacing: 3px;
+
 		}
 		&__button {
       padding-right: 44px;
@@ -378,11 +404,12 @@ main{
 .gallery {
 width: 390px;
 		&__title {
+      font-family: 'PT Sans Narrow';
       font-size: 32px;
       line-height: 35px;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
 		}
 }
 
@@ -394,14 +421,14 @@ width: 390px;
 			position: absolute;
 			top: 50%;
 			width: 100%;
-			transform: translateY(-50%);
+			transform: translateY(-75%);
 			display: flex;
 			justify-content: space-between;
 
 		}
 		&__image {
 			display: block;
-		}
+      }
 
 		&__button {
 			width: 48px;
@@ -416,7 +443,7 @@ width: 390px;
 		}
 		&__button:focus{
 			background-color:#4e2e0e;
-			outline: 2px solid #DBB590;
+			outline: 2px solid #dbb590;
 		}
 }
 .slider-prev {
@@ -426,19 +453,19 @@ width: 390px;
 }
 .slider-pagination {
 		list-style-type: none;
-		display: flex;
+ 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 
 		&__item {
-			margin-right:8px;
+      margin-right:8px;
 		}
 		&__item:last-child {
 			margin-right:0px;
 		}
 
 		&__button {
-
+      margin-top: 16px;
 			width: 8px;
 			height: 8px;
 			background: #d8d8d8;
@@ -446,11 +473,11 @@ width: 390px;
 			}
 
 			&__button:hover{
-				background: #AF7842;
+				background: #af7842;
 			}
 			&__button:focus{
 				outline: none;
-				 background: #DBB590;
+				 background: #dbb590;
 			}
 			&__button-current {
 			background-color: #242424;}
@@ -459,40 +486,40 @@ width: 390px;
 
 
 .contacts {
-  font-weight: 700;
   width: 352px;
-
 		&__title {
+      font-family: 'PT Sans Narrow';
+      font-weight: 700;
       font-size: 32px;
       line-height: 35px;
-      font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 24px;
 		}
 
 		&__subtitle {
+      font-family: 'PT Sans Narrow';
       font-weight: 700;
       font-size: 20px;
       line-height: 28px;
       text-transform: uppercase;
-      color: #AF7842;
+      color: #af7842;
       margin-bottom: 8px;
 		}
 
 		&__address {
-      font-style: normal;
-      margin-bottom: 8px;
+      margin-bottom: 22px;
 		}
 
 		&__schedule {
       margin-bottom: 21px;
+
 		}
 
 		&__text {
       font-size: 14px;
       line-height: 20px;
       font-weight: 700;
-      color: #FFFFFF;
+      color: #fff;
 		}
 
 		&__phone {
@@ -509,7 +536,7 @@ width: 390px;
       font-size: 20px;
       line-height: 26px;
       font-weight: 700;
-      color: #FFFFFF;
+      color: #fff;
       text-decoration: underline;
       text-transform: uppercase;
 		}
@@ -518,20 +545,20 @@ width: 390px;
 
 .address {
 		&__text {
+          font-style: normal;
       		font-weight: 700;
       		font-size: 16px;
       		line-height: 24px;
       		margin-bottom: 8px;
-      		color: #242424;
-
-		}
+      	}
 		&__phone {
-			color:#000000;
+      font-family: 'PT Sans Narrow';
 			font-weight: 700;
 			font-size: 24px;
 			line-height: 29px;
-			color: #242424;
+      color: #242424;
 			text-decoration: underline;
+      font-style: normal;
 			  }
 }
 
@@ -540,15 +567,14 @@ width: 390px;
       font-weight: 700;
       font-size: 16px;
       line-height: 24px;
-      color: #242424;
-      margin-bottom: 8px;
+
 		}
 }
 
 .button-feedback {
   font-weight: 700;
   color:#242424;
-  background-color:#FFFFFF;
+  background-color:#fff;
 }
 
 .contacts__nav .button {
@@ -558,26 +584,30 @@ width: 390px;
 
 
 .button-feedback:hover {
-  background: #DBB590;
+  background: #dbb590;
 }
 .button-feedback:focus {
-  background: #DBB590;
-  outline: 2px solid #AF7842;
+  background: #dbb590;
+  outline: 2px solid #af7842;
 }
 .button-light{
 	font-weight: 700;
 	color:#242424;
-	background-color:#FFFFFF;
+	background-color:#fff;
+
 }
+
+
 
 .appointment {
   width: 430px;
 		&__title {
+      font-family: 'PT Sans Narrow';
       font-size: 32px;
       line-height: 35px;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
 		}
 
 		&__text {
@@ -589,9 +619,10 @@ width: 390px;
 
 		&__form {
       color: #595959;
+
       display: grid;
       grid-template-columns: 115px 74px 208px;
-      gap:14px 16px;
+      gap:19px 16px;
 		}
 }
 
@@ -627,24 +658,25 @@ width: 390px;
 }
 
 .field{
-padding: 8px 14px;
+padding: 9px 15px;
+font-size: 16px;line-height: 24;
 font:inherit;
 font-weight: 700;
-background-color:#FFFFFF;
-border:2px solid #242424;
+background-color:#fff;
+border: 2px solid #242424;
 margin: 0;
 }
 .field:hover,
 .field:focus{
-	border-color:#AF7842;
+	border-color:#af7842;
 }
 .field:focus{
-	outline: 2px solid #DBB590;
+	outline: 2px solid #dbb590;
 }
 .field:disabled,
 .field:disabled:hover{
 	color:#595959;
-	background-color:#DBB590;
+	background-color:#dbb590;
 	border-color:#595959;
 }
 .field:invalid{
@@ -671,7 +703,7 @@ margin: 0;
 		}
 }
 .form-label {
-
+    margin-bottom: 8px;
 
 		&__icon {
 			position: relative;
@@ -689,6 +721,9 @@ margin: 0;
 		}
 }
 
+
+
+
 .footer-container{
   display: flex;
   padding: 40px;
@@ -698,17 +733,15 @@ margin: 0;
 .footer {
   font-size: 14px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #fff;
   background-color: #242424;
   background-image: url("../assets/img/dark.png");
 
   		a {
-   		 color: #FFFFFF;
+   		 color: #fff;
   }
   		&__logo{
     display: block;
-    width: 184px;
-    height: 21px;
     margin-bottom: 24px;
   }
 		&__contact {
@@ -737,21 +770,23 @@ margin: 0;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 140%;
+    line-height: 20px;
     margin-bottom: 4px;
 
   }
 
   &__phone {
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
     text-decoration-line: underline;
-    text-transform: uppercase;
-
-  }
+      }
 
   &__map-link {
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
     font-size: 20px;
     line-height: 26px;
     text-decoration-line: underline;
@@ -766,7 +801,7 @@ margin: 0;
       font-size: 20px;
       line-height: 28px;
       font-weight: 700;
-      color: #FFFFFF;
+      color: #fff;
       text-transform: uppercase;
       margin-bottom: 14px;
 		}
@@ -793,6 +828,7 @@ margin: 0;
 
 .social {
 		&__title {
+      font-family: 'PT Sans Narrow';
       font-weight: 700;
       font-size: 20px;
       margin-bottom: 14px;
@@ -802,9 +838,8 @@ margin: 0;
 		&__list {
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 36px;
-
-		}
+      margin-bottom: 26px;
+      }
 		&__item {
       width: 56px;
       height: 44px;
@@ -824,11 +859,15 @@ margin: 0;
       line-height: 16px;
       font-weight: 700;
       text-align: center;
-      color: #FFFFFF;
+      color: #fff;
       background:#000000  center / 16px 16px no-repeat;
 		}
 
 		&__text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+
 		}
     &__button{
     }
@@ -852,7 +891,10 @@ margin: 0;
 .html {
 		p &__link {
       font-size: 14px;
-      color: #DBB590;
+      font-weight: 700;
+      line-height: 20px;
+      color: #dbb590;
+      text-decoration: underline;
 		}
 }
 
@@ -874,7 +916,7 @@ margin: 0;
 	padding: 40px;
 	margin: auto;
 	position: relative;
-	background-color: #FFFFFF;
+	background-color: #fff;
   }
 
   .modal-auth {
@@ -937,7 +979,7 @@ margin: 0;
   .auth-form-register {
 	width: 360px;
 	color: #000000;
-	background-color: #FFFFFF;
+	background-color: #fff;
   }
 
 @import "_catalog";
